@@ -5,6 +5,20 @@
     <artifactId>mavenproject1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.vertispan.j2cl</groupId>
+            <artifactId>junit-emul</artifactId>
+            <version>0.11.0-9336533b6</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>net.wetheinter</groupId>
+            <artifactId>xapi-gwt-test</artifactId>
+            <version>0.5</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>24</maven.compiler.release>
