@@ -1,14 +1,15 @@
-package com.mycompany.mavenproject1;
+package com.mycompany.monedatest;
 
-/**
- *
- * @author elise
- */
 import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import org.junit.rules.TestName;
 
 public class ConversorTest {
 
     private static Conversor conversor;
+
+    @Rule
+    public TestName name = new TestName();
 
     @BeforeClass
     public static void setUpClass() {
@@ -18,7 +19,7 @@ public class ConversorTest {
 
     @Before
     public void setUp() {
-        System.out.println("🔸 Ejecutando: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+        System.out.println("Ejecutando: " + name.getMethodName());
     }
 
     @Test
@@ -41,11 +42,11 @@ public class ConversorTest {
 
     @After
     public void tearDown() {
-        System.out.println("🔻 Prueba finalizada, campos en 0");
+        System.out.println("Prueba finalizada, campos en 0\n");
     }
 
     @AfterClass
     public static void tearDownClass() {
-        System.out.println("✅ Todas las pruebas han finalizado");
+        System.out.println("Todas las pruebas han finalizado");
     }
 }
